@@ -4,21 +4,21 @@ namespace Example.Tests
 {
     [TestClass]
     [Ignore]
-    public class BaseTestClass
+    public class SourceClassTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Constructor_Tests()
         {
-            Assert.Fail();
+            Assert.Fail(); // Skipped in all versions
         }
 
         [TestClass]
-        public class DerivedTestClass : BaseTestClass
+        public class DerivedTestClass : SourceClassTests
         {
             [TestMethod]
-            public void TestMethod2()
+            public void Method_Within_SourceClassTests()
             {
-                Assert.Fail();
+                Assert.Fail(); // Fails from TestFramework 3.5.0
             }
         }
     }

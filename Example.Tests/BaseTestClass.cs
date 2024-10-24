@@ -13,10 +13,10 @@ namespace Example.Tests
         }
 
         [TestClass]
-        public class DerivedTestClass : SourceClassTests
+        public class MethodWithinSourceClass : SourceClassTests
         {
             [TestMethod]
-            public void Method_Within_SourceClassTests()
+            public void Should_DoSomething()
             {
                 Assert.Fail(); // Fails from TestFramework 3.5.0
             }
